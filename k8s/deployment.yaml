@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webcolor
+  name: webcolor-ml
 spec:
   selector:
     matchLabels:
-      app: webcolor
+      app: webcolor-ml
   template:
     metadata:
       labels:
-        app: webcolor
+        app: webcolor-ml
     spec:
       containers:
       - name: webcolor
@@ -20,11 +20,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: webcolor
+  name: webcolor-ml
 spec:
   type: LoadBalancer
   selector:
-    app: webcolor
+    app: webcolor-ml
   ports:
   - port: 80  
     targetPort: 80
