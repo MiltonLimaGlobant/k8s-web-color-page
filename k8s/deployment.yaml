@@ -22,6 +22,7 @@ kind: Service
 metadata:
   name: webcolor
 spec:
+  type: LoadBalancer
   selector:
     app: webcolor
   ports:
